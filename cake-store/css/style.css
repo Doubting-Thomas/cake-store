@@ -1,0 +1,144 @@
+:root {
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 60rem;
+  font-family: "Lexend Deca", cursive;
+  font-size: 1.6rem;
+  line-height: 1.6;
+
+  background-color: #f492f0;
+  color: #fff;
+}
+
+.nav__container {
+  padding: 1rem 5rem;
+  margin: 1rem 5rem;
+  background-color: #fff;
+  color: #f492f0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__text {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.heading {
+  font-weight: 700;
+}
+
+.cart-count {
+  font-size: 1.2rem;
+}
+
+.cart-img {
+  position: absolute;
+  cursor: pointer;
+}
+
+.nav__cart {
+  display: flex;
+  align-items: center;
+}
+
+.cart-count {
+  padding: 0.1rem;
+  position: relative;
+  top: -1rem;
+  left: 1.8rem;
+  background-color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.store {
+  padding: 1rem 5rem;
+  /* text-align: center; */
+}
+
+.store__heading {
+  font-size: 4rem;
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10rem;
+  padding: 1rem 5rem;
+  width: 70%;
+}
+
+.product__details {
+  flex-grow: 1;
+  flex-basis: 15%;
+  padding: 0.5rem 1rem 1rem 1rem;
+  background-color: #fff;
+  color: #f492f0;
+
+  border-radius: 1rem;
+  transition: all 0.3s;
+}
+
+.product__details:hover {
+  transform: scale(1.1);
+}
+
+/* .product__details:active {
+  transform: scale(1);
+} */
+
+.product__img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.product__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.btn-info {
+  padding: 0 1rem;
+}
+
+.product__btn {
+  padding: 0.5rem 1rem;
+  width: 90%;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+
+  background-color: #f492f0;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.product__btn:hover {
+  background-color: #ef65eb;
+}
