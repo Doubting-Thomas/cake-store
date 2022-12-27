@@ -7,9 +7,3 @@ btnAdd.addEventListener("click", function (e) {
     console.log("clicked");
   }
 });
-
-// btnAdd.addEventListener("click", function (e) {
-//   if (e.target.matches("button.btn")) {
-//     console.log("clicked");
-//   }
-// });
