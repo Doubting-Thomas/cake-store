@@ -1,9 +1,8 @@
-const btnAdd = document.querySelector(".btn-info");
-const cartCount = document.querySelector(".cart-count");
+const navBtn = document.querySelector(".nav__cart--btn");
+const navCart = document.querySelector(".cart");
 
-btnAdd.addEventListener("click", function (e) {
-  if (e.target.classList.contains("btn")) {
-    cartCount.classList.remove("hidden");
-    console.log("clicked");
-  }
-});
+function revealCart() {
+  navCart.classList.remove("hidden");
+}
+
+navBtn.addEventListener("click", revealCart);
