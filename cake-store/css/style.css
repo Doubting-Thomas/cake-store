@@ -107,6 +107,11 @@ body {
   transition: all 2s ease-in-out;
 }
 
+/* .cart-img {
+  position: absolute;
+  cursor: pointer;
+} */
+
 .store {
   padding: 1rem 5rem;
 }
