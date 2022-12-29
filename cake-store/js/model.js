@@ -21,13 +21,13 @@ function addToCart() {
         //     .firstChild.nextSibling.src
         // );
 
-        let imgSrc =
-          e.target.parentElement.previousElementSibling.previousElementSibling
-            .firstChild.nextSibling;
-        imgSrc.classList.add("cart-mini");
-        console.log(imgSrc);
+        // let imgSrc =
+        //   e.target.parentElement.previousElementSibling.previousElementSibling
+        //     .firstChild.nextSibling;
+        // imgSrc.classList.add("cart-mini");
+        // console.log(imgSrc);
 
-        imgSrc =
+        let imgSrc =
           e.target.parentElement.previousElementSibling.previousElementSibling
             .firstChild.nextSibling.src;
         let imgPos = imgSrc.indexOf("img");
