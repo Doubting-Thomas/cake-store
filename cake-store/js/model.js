@@ -10,23 +10,6 @@ function addToCart() {
   btnCart.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       if (e.target.parentElement.classList.contains("btn-info")) {
-        // let come =
-        //   e.target.parentElement.previousElementSibling.previousElementSibling
-        //     .firstChild.nextSibling;
-        // come.classList.add("cart-mini");
-        // console.log(come);
-
-        // console.log(
-        //   e.target.parentElement.previousElementSibling.previousElementSibling
-        //     .firstChild.nextSibling.src
-        // );
-
-        // let imgSrc =
-        //   e.target.parentElement.previousElementSibling.previousElementSibling
-        //     .firstChild.nextSibling;
-        // imgSrc.classList.add("cart-mini");
-        // console.log(imgSrc);
-
         let imgSrc =
           e.target.parentElement.previousElementSibling.previousElementSibling
             .firstChild.nextSibling.src;
