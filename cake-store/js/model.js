@@ -1,4 +1,11 @@
-import { btnCart, navBtn, navCart } from "./config.js";
+import {
+  btnCart,
+  navBtn,
+  navCart,
+  cartScore,
+  cartCount,
+  cartTotalValue,
+} from "./config.js";
 // Display the cart
 function revealCart() {
   navCart.classList.toggle("hidden");
@@ -19,13 +26,18 @@ function addToCart() {
 
         const cartItem = {};
         cartItem.img = imgPath;
+
         let cartItemName =
           e.target.parentElement.previousElementSibling.firstChild
             .nextElementSibling.textContent;
         cartItem.name = cartItemName;
-        let cartItemPrice =
+
+        let cartItemValue =
           e.target.parentElement.previousElementSibling.firstChild
             .nextElementSibling.nextElementSibling.textContent;
+        console.log(cartItemValue);
+
+        let cartItemPrice = cartItemValue.slice(1).trim();
         cartItem.price = cartItemPrice;
         console.log(cartItem);
 
@@ -41,6 +53,7 @@ function addToCart() {
         />
         <div class="cart__text">
           <p class="cart__title">${cartItem.name}</p>
+          <span>$</span>
           <span class="cart__price">${cartItem.price}</span>
         </div>
         <a href="#" class="cart-item-remove">
@@ -50,8 +63,10 @@ function addToCart() {
     `;
         console.log(addCartItem);
 
-        navCart.insertAdjacentElement("beforeend", addCartItem);
+        navCart.insertAdjacentElement("afterbegin", addCartItem);
         alert("Successfully added to cart!");
+        cartCount.classList.remove("hidden");
+        totalPrice();
       } else {
         console.log("err");
       }
@@ -59,21 +74,23 @@ function addToCart() {
   });
 }
 
-// function addToCart() {
-//   btnCart.forEach(function (btn) {
-//     btn.addEventListener("click", function (e) {
-//       // if (e.target.classList.contains("product__btn")) {
-//       //   console.log(e.target);
-//       // } else {
-//       //   console.log("err");
-//       // }
-//       const clicked = e.target.closest("product__img");
-//       console.log(clicked);
-//     });
-//   });
-// }
-
 addToCart();
-navBtn.addEventListener("click", revealCart);
 
-// btnCart.addEventListener("click", addToCart);
+function totalPrice() {
+  const cartTotal = [];
+  const cartItems = document.querySelectorAll(".cart__price");
+
+  cartItems.forEach(function (item) {
+    cartTotal.push(parseInt(item.textContent));
+  });
+
+  const cartTotalPrice = cartTotal.reduce(function (sum, item) {
+    sum += item;
+    return sum;
+  }, 0);
+  console.log(cartTotalPrice);
+
+  cartTotalValue.textContent = `$${cartTotalPrice}`;
+  console.log(cartTotalValue);
+}
+navBtn.addEventListener("click", revealCart);

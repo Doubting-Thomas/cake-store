@@ -34,15 +34,15 @@
 
           <p class="cart-info">
             <span class="cart-count score hidden"
-              ><span class="cart-score">1</span></span
-            >
+              ><span class="cart-score"></span
+            ></span>
           </p>
         </div>
       </div>
     </header>
 
     <section class="cart hidden">
-      <div class="cart__item">
+      <div class="cart__item u-margin-bottom-md">
         <img
           src="img/istockphoto-1167344045-612x612.jpg"
           class="cart-mini"
@@ -50,11 +50,17 @@
         />
         <div class="cart__text">
           <p class="cart__title">Cart Item</p>
-          <span class="cart__price">$30</span>
+          <span>$</span>
+          <span class="cart__price">30</span>
         </div>
         <a href="#" class="cart-item-remove">
           <img src="img/icons8-trash-can-24.png" alt="trash-icon" />
         </a>
+      </div>
+
+      <div class="cart__total">
+        <h3 class="cart__total--text">Total</h3>
+        <span class="cart__total--price heading"></span>
       </div>
     </section>
 

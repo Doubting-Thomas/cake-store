@@ -107,6 +107,12 @@ body {
   transition: all 2s ease-in-out;
 }
 
+.cart__total {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 /* .cart-img {
   position: absolute;
   cursor: pointer;
