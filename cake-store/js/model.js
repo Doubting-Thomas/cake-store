@@ -92,5 +92,8 @@ function totalPrice() {
 
   cartTotalValue.textContent = `$${cartTotalPrice}`;
   console.log(cartTotalValue);
+
+  cartScore.textContent = cartTotal.length;
+  console.log(cartScore);
 }
 navBtn.addEventListener("click", revealCart);
