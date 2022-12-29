@@ -21,19 +21,6 @@ function addToCart() {
   });
 }
 
-// function addToCart() {
-//   btnCart.forEach(function (btn) {
-//     btn.addEventListener("click", function (e) {
-//       // if (e.target.classList.contains("product__btn")) {
-//       //   console.log(e.target);
-//       // } else {
-//       //   console.log("err");
-//       // }
-//       const clicked = e.target.closest("product__img");
-//       console.log(clicked);
-//     });
-//   });
-// }
 addToCart();
 navBtn.addEventListener("click", revealCart);
 

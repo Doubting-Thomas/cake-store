@@ -51,11 +51,6 @@ body {
   font-weight: 700;
 }
 
-.cart-img {
-  /* position: absolute;
-  cursor: pointer; */
-}
-
 .nav__cart {
   display: flex;
   align-items: center;
@@ -114,7 +109,6 @@ body {
 
 .store {
   padding: 1rem 5rem;
-  /* text-align: center; */
 }
 
 .store__heading {
@@ -145,10 +139,6 @@ body {
 .product__details:hover {
   transform: scale(1.1);
 }
-
-/* .product__details:active {
-  transform: scale(1);
-} */
 
 .product__img {
   height: 100%;
