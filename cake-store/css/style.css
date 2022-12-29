@@ -82,8 +82,6 @@ body {
   color: #f492f0;
   width: 30%;
   overflow: hidden;
-  /* visibility: hidden;
-  opacity: 0; */
 }
 
 .cart__item {
@@ -91,11 +89,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-/* .show-cart {
-  width: 18rem;
-  padding: 2rem 1.5rem;
-  transform: rotateY(-360deg);
-} */
 
 .cart-mini {
   height: 25%;
@@ -113,10 +106,9 @@ body {
   justify-content: space-around;
 }
 
-/* .cart-img {
-  position: absolute;
-  cursor: pointer;
-} */
+.cart-score {
+  color: #fff;
+}
 
 .store {
   padding: 1rem 5rem;

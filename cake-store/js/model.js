@@ -6,11 +6,6 @@ import {
   cartCount,
   cartTotalValue,
 } from "./config.js";
-// Display the cart
-function revealCart() {
-  navCart.classList.toggle("hidden");
-}
-console.log("yes");
 
 //Add items to the cart
 function addToCart() {
@@ -67,8 +62,6 @@ function addToCart() {
         alert("Successfully added to cart!");
         cartCount.classList.remove("hidden");
         totalPrice();
-      } else {
-        console.log("err");
       }
     });
   });
@@ -76,6 +69,7 @@ function addToCart() {
 
 addToCart();
 
+// Display the total price in the cart view
 function totalPrice() {
   const cartTotal = [];
   const cartItems = document.querySelectorAll(".cart__price");
@@ -96,4 +90,10 @@ function totalPrice() {
   cartScore.textContent = cartTotal.length;
   console.log(cartScore);
 }
+
+// Display the cart
+function revealCart() {
+  navCart.classList.toggle("hidden");
+}
+
 navBtn.addEventListener("click", revealCart);
