@@ -51,6 +51,7 @@ function addToCart() {
         console.log(addCartItem);
 
         navCart.insertAdjacentElement("beforeend", addCartItem);
+        alert("Successfully added to cart!");
       } else {
         console.log("err");
       }
