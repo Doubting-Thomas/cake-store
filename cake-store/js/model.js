@@ -7,7 +7,7 @@ import {
   cartTotalValue,
 } from "./config.js";
 
-//Add items to the cart
+// Add items to the cart
 function addToCart() {
   btnCart.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
@@ -15,9 +15,10 @@ function addToCart() {
         let imgSrc =
           e.target.parentElement.previousElementSibling.previousElementSibling
             .firstChild.nextSibling.src;
+
+        // Get the position of the image
         let imgPos = imgSrc.indexOf("img");
         let imgPath = imgSrc.slice(imgPos);
-        console.log(imgPath);
 
         const cartItem = {};
         cartItem.img = imgPath;
@@ -30,11 +31,9 @@ function addToCart() {
         let cartItemValue =
           e.target.parentElement.previousElementSibling.firstChild
             .nextElementSibling.nextElementSibling.textContent;
-        console.log(cartItemValue);
 
         let cartItemPrice = cartItemValue.slice(1).trim();
         cartItem.price = cartItemPrice;
-        console.log(cartItem);
 
         // Insert the values into the HTML
         const addCartItem = document.createElement("div");
@@ -56,7 +55,6 @@ function addToCart() {
         </a>
       </div>
     `;
-        console.log(addCartItem);
 
         navCart.insertAdjacentElement("afterbegin", addCartItem);
         alert("Successfully added to cart!");
@@ -66,7 +64,6 @@ function addToCart() {
     });
   });
 }
-
 addToCart();
 
 // Display the total price in the cart view
@@ -82,13 +79,10 @@ function totalPrice() {
     sum += item;
     return sum;
   }, 0);
-  console.log(cartTotalPrice);
 
   cartTotalValue.textContent = `$${cartTotalPrice}`;
-  console.log(cartTotalValue);
 
   cartScore.textContent = cartTotal.length;
-  console.log(cartScore);
 }
 
 // Display the cart
