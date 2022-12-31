@@ -86,6 +86,8 @@ body {
 
 .cart__message {
   color: #000;
+
+  padding: 0.5rem;
 }
 
 .cart__item {
@@ -103,7 +105,7 @@ body {
 }
 
 .cart__item {
-  transition: all 2s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .cart__total {
