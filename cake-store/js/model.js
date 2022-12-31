@@ -5,6 +5,7 @@ import {
   cartScore,
   cartCount,
   cartTotalValue,
+  cartTotalText,
 } from "./config.js";
 
 // Add items to the cart
@@ -59,6 +60,7 @@ function addToCart() {
         navCart.insertAdjacentElement("afterbegin", addCartItem);
         alert("Successfully added to cart!");
         cartCount.classList.remove("hidden");
+        cartTotalText.classList.remove("hidden");
         totalPrice();
       }
     });
