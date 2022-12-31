@@ -6,6 +6,7 @@ import {
   cartCount,
   cartTotalValue,
   cartTotalText,
+  cartMessage,
 } from "./config.js";
 
 // Add items to the cart
@@ -61,6 +62,7 @@ function addToCart() {
         alert("Successfully added to cart!");
         cartCount.classList.remove("hidden");
         cartTotalText.classList.remove("hidden");
+        cartMessage.classList.add("hidden");
         totalPrice();
       }
     });
