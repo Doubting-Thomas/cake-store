@@ -84,6 +84,10 @@ body {
   overflow: hidden;
 }
 
+.cart__message {
+  color: #000;
+}
+
 .cart__item {
   display: flex;
   align-items: center;
