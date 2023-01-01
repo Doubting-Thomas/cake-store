@@ -82,6 +82,7 @@ body {
   color: #f492f0;
   width: 30%;
   overflow: hidden;
+  opacity: 0.9;
 }
 
 .cart__message {
