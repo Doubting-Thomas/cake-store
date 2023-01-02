@@ -76,7 +76,7 @@ body {
 
 .cart {
   background-color: var(--color-secondary);
-  color: var(--color-primary);
+  color: var(--color-tertiary-3);
   position: absolute;
   min-height: 10rem;
   top: 6.25rem;
