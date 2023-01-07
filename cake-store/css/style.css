@@ -42,6 +42,7 @@ body {
 .nav__text {
   font-size: 4rem;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .nav__cart--btn {
@@ -129,6 +130,7 @@ body {
 
 .store__heading {
   font-size: 4rem;
+  text-transform: uppercase;
 }
 
 .product {
