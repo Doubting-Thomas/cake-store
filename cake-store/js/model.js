@@ -9,7 +9,12 @@ import {
   cartMessage,
 } from "./config.js";
 
-const cartItem = {};
+// let cartItemss = {
+//   name: "john doe",
+//   items: 7,
+// };
+
+let cartItem = {};
 
 // Add items to the cart
 function addToCart() {
@@ -67,7 +72,8 @@ function addToCart() {
         cartMessage.classList.add("hidden");
         totalPrice();
 
-        cartItem;
+        console.log(cartItem);
+        //storeCart();
       }
     });
   });
@@ -98,4 +104,22 @@ function revealCart() {
   navCart.classList.toggle("hidden");
 }
 
+// function storeFakeCart() {
+//   localStorage.setItem("cartItemss", JSON.stringify(cartItemss));
+//   let keepCart = localStorage.getItem("cartItemss");
+//   if (keepCart) cartItemss = JSON.parse(keepCart);
+//   console.log(keepCart);
+// }
+// storeFakeCart();
+
+function storeCart() {
+  localStorage.setItem("cartItem", JSON.stringify(cartItem));
+  let saveCart = localStorage.getItem("cartItem");
+  if (saveCart) cartItem = JSON.parse(saveCart);
+  console.log(saveCart);
+}
+storeCart();
+//storeCart();
+// let storeCart = localStorage.getItem("cartItem");
+// console.log(JSON.parse(storeCart));
 navBtn.addEventListener("click", revealCart);
