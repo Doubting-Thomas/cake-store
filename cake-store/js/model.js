@@ -9,6 +9,8 @@ import {
   cartMessage,
 } from "./config.js";
 
+const cartItem = {};
+
 // Add items to the cart
 function addToCart() {
   btnCart.forEach(function (btn) {
@@ -22,7 +24,7 @@ function addToCart() {
         let imgPos = imgSrc.indexOf("img");
         let imgPath = imgSrc.slice(imgPos);
 
-        const cartItem = {};
+        // const cartItem = {};
         cartItem.img = imgPath;
 
         let cartItemName =
@@ -64,6 +66,8 @@ function addToCart() {
         cartTotalText.classList.remove("hidden");
         cartMessage.classList.add("hidden");
         totalPrice();
+
+        cartItem;
       }
     });
   });
