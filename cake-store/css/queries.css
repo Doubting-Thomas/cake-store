@@ -1,7 +1,29 @@
 @media (min-width: 56.25em) {
+  body {
+    max-width: 90rem;
+  }
 
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10rem;
+    padding: 1rem 5rem;
+    width: 90%;
+  }
+
+  .product__details {
+    flex-grow: 1;
+    flex-basis: 20%;
+    padding: 0.5rem 1rem 1rem 1rem;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+
+    border-radius: 1rem;
+    transition: all 0.3s;
+  }
 }
 
 @media (min-width: 75em) {
-  
 }
