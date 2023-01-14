@@ -66,8 +66,6 @@ function addToCart() {
         cartTotalText.classList.remove("hidden");
         cartMessage.classList.add("hidden");
         totalPrice();
-
-        console.log(cartItem);
       }
     });
   });
@@ -102,7 +100,6 @@ function storeCart() {
   localStorage.setItem("cartItem", JSON.stringify(cartItem));
   let saveCart = localStorage.getItem("cartItem");
   if (saveCart) cartItem = JSON.parse(saveCart);
-  console.log(saveCart);
 }
 storeCart();
 
